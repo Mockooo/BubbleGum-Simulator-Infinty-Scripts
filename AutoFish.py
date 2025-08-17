@@ -408,11 +408,11 @@ class GlassWindow(QtWidgets.QWidget):
         self.setWindowFlags(
             QtCore.Qt.WindowType.FramelessWindowHint
             | QtCore.Qt.WindowType.WindowSystemMenuHint
-            | QtCore.Qt.WindowType.Tool
             | QtCore.Qt.WindowType.WindowStaysOnTopHint
         )
         self.setAttribute(QtCore.Qt.WidgetAttribute.WA_TranslucentBackground, True)
         self.setAttribute(QtCore.Qt.WidgetAttribute.WA_ShowWithoutActivating, True)
+        self.setWindowFlag(QtCore.Qt.WindowType.WindowStaysOnTopHint, True)
         self.resize(1040, 640)
 
         self._drag_pos = None
